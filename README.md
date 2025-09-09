@@ -1,3 +1,5 @@
+Aclaración: Video Adjunto en el repositorio
+
 Para ejecutar la fachada y el serivor web basta con ejecutar los siguientes comandos desde linea de comandos 
 
 ```
