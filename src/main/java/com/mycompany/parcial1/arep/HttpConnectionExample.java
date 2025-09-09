@@ -19,12 +19,12 @@ import java.net.URL;
     private static final String USER_AGENT = "Mozilla/5.0";
     private static final String GET_URL = "http://localhost:40000";
     private static HttpConnectionExample instancia;
-    private String respuesta;
+    private static String response;
     
     public HttpConnectionExample getInstace(){
         return instancia;
     }
-    public static void consultarServicio(String query) throws IOException {
+    public static String consultarServicio(String query) throws IOException {
         
         URL obj = new URL(GET_URL);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -45,13 +45,12 @@ import java.net.URL;
                 response.append(inputLine);
             }
             in.close();
-
-            // print result
-            System.out.println(response.toString());
+            return response.toString();
         } else {
             System.out.println("GET request not worked");
         }
         System.out.println("GET DONE");
+        return response.toString();
     }
 
 }
